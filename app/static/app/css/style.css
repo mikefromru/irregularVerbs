@@ -1,0 +1,137 @@
+.menu {
+    float: right;
+    margin-top: 8px;
+}
+.menu li{
+    display: inline;
+}
+.menu li + li {
+    margin-left: 35px;
+}
+.menu li a {
+    color: #999;
+    text-decoration: none;
+}
+.menu {
+    color: darkolivegreen;
+    font-family: "Helvetice Neue", Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin: 2px;
+    padding: 2px;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    padding: 1;
+    font-family: "Helvetice Neue", Arial, Helvetica, sans-serif;
+    /*background-color: #E1E6E6;*/
+    /*background-color: #483D8B; */
+
+    background-color: #282C34;
+    color: darkolivegreen;
+}
+a {color: cornflowerblue;}
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:active {text-decoration: none;}
+a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+header {
+    background-color: black;
+    height: 35px;
+    width: 100%;
+    opacity: .9;
+    margin-bottom: 10px;
+}
+header h1.label {
+    margin: 0;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    float: left;
+}
+
+header h1.label:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+#menu {
+    width: 50%;
+    padding-top: 14px;
+    text-indent: 100px;
+    margin-top: auto;
+    height: 30px;
+    text-align: middle;
+    background: #D0D1D2;
+    color: aliceblue;
+    list-style: none;
+    border-radius: 0 0 15px 15;
+}
+
+/*for Safari and Chrom*/
+::-webkit-input-placeholder {
+    text-align: center;
+    color: grey;
+    font-size: 20px;
+}
+/*for Firefox*/
+::-moz-placeholder {
+    text-align: center;
+    color: grey;
+    font-size: 20px;
+}
+
+input.text {
+    text-align: center;
+    background-color: white;
+    border: solid 1px black;
+    width: 550px;
+    height: 30px;
+    padding: 5px 10px 5px 10px;
+    font-size: 30px;
+    font-family: Tahoma;
+}
+
+.b {
+    color: green;
+    background-color: white;
+    width: 160px;
+    height: 35px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.b[disabled] {
+    color: gray;
+    background-color: Gainsboro;
+}
+
+.buttons {
+    color: grey;
+
+    background-color: white;
+    width: 160px;
+    height: 35px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.butDell {
+    background-color: white;
+    height: 28px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/*===========This is for charbocks==========*/

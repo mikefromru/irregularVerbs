@@ -1,0 +1,44 @@
+{% load staticfiles %}
+{% include 'app/head.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .tmpB {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+   <h1>My name is test.html</h1>
+   
+   <div id="text"></div>
+   </br>
+   <form name="field">
+    <input type="text">
+    <input type="button" id='1' class='tmpB' onclick="foo()" value='Go'>
+   </form>
+
+   <script>
+        
+        var myDict = {"{{ruwords}}": ["{{enwords}}"]}
+        var keyList = Object.keys(myDict)
+        var rand = Math.floor(Math.random() * keyList.length)
+        var russiaWord = keyList[rand]
+        var russiaWord_one = russiaWord.split(' ')
+        console.log(russiaWord_one)
+        // console.log(myDict[russiaWord])
+        // console.log(russiaWord.split(' '))
+        function foo() {
+            console.log("I am a function for delete")
+            console.log(russiaWord_one)
+            document.getElementById('text').innerHTML = russiaWord_one.pop()
+        }
+        document.getElementById('text').innerHTML = russiaWord_one.pop()
+
+   </script>
+</body>
+</html>
