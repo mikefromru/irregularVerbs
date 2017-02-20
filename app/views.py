@@ -25,14 +25,16 @@ def index(request):
     someDict = {
     'ru': russia,
     'en': english,
-    'but': buttons[0]
+    'but': buttons
     }
 
     ruwords = ' '.join(someDict.get('ru'))
     enwords = ' '.join(someDict.get('en'))
+    stackbut = ' '.join(someDict.get('but'))
 
     return render(request, 'app/index.html', {'ruwords': ruwords,
      'right': right,
      'error': error,
      'enwords': enwords,
+     'stackbut': stackbut,
      })

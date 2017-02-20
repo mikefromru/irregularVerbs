@@ -18,15 +18,34 @@
     </style>
 </head>
 <body>
+    
     <div class='bar' id='text'></div>
     <br>
+
     <form name='field'>
-        <input type="text" class="text" name='input'>
-        <input type="button" onclick="foo()" value='ok'>
+        <input type="text" class="text" name='input'><br>
+
+        <input type="button" class="buttons" id='0' onclick="addElem('0')">
+        <input type="button" id='1' class="buttons" onclick="addElem('1')">
+        <input type="button" id='2' class="buttons" onclick="addElem('2')">
+        <input type="button" id='3' class="buttons" onclick="addElem('3')">
+        <input type="button" id='4' class="buttons" onclick="addElem('4')">
+        <br>
+        <input type="button" id='5' class="buttons" onclick="addElem('5')">
+        <input type="button" id='6' class="buttons" onclick="addElem('6')">
+        <input type="button" id='7' class="buttons" onclick="addElem('7')">
+        <br>
+        <input type="button" id='8' class="buttons" onclick="addElem('8')">
+        <input type="button" id='9' class="buttons" onclick="addElem('9')">
+
+        <br>
+        <input type="button" class="buttons" onclick="foo()" value='>>>'>
     </form>
+
     <script>
         var ru = "{{ruwords}}"
         var en = "{{enwords}}"
+        var stackbut = "{{stackbut}}"
     </script>
     <script src='/static/app/js/jsindex.js'></script>
 
