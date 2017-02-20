@@ -28,6 +28,6 @@ def index(request):
     stackbut = ' '.join(someDict.get('but'))
 
     return render(request, 'app/index.html', {'ruwords': ruwords,
-     'enwords': enwords,
-     'stackbut': stackbut,
-     })
+    'enwords': enwords,
+    'stackbut': stackbut,
+})

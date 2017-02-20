@@ -38,7 +38,6 @@ function addElem(a) {
 //================================================================
 // this click on the button named "Go"
 function foo() {
-   dellValueFromField() 
 
 
     if (field.input.value.length == 0){ // checking on empty input
@@ -53,6 +52,7 @@ function foo() {
         document.getElementById('text').innerHTML = list_ru.pop()
         checking()
     }
+    dellValueFromField() 
 }
 // this click on the button named "Go"
 //================================================================
