@@ -17,29 +17,42 @@
         }
     </style>
 </head>
+    <audio muted id="audio" src="/static/app/0091.mp3" type="audio/mp3"></audio>
 <body>
-    
+
+    <div class="can-toggle">
+        <input id="a" type="checkbox">
+        <label for="a">
+        <div class="can-toggle__switch" data-checked="On" data-unchecked="Off"></div>
+        </label>
+    </div>
+
+
     <div class='bar' id='text'></div>
     <br>
 
     <form name='field'>
-        <input type="text" class="text" name='input'><br>
+        <input type="text" class="text" name='input' onfocus="this.blur()"
+        placeholder="infinitive    past simple    past participle">
+        <input type="button" id='dell' class="butDell" value="X" onclick="dellValueFromField()"
+        <br>
+        <br>
 
-        <input type="button" class="buttons" id='0' onclick="addElem('0')">
-        <input type="button" id='1' class="buttons" onclick="addElem('1')">
-        <input type="button" id='2' class="buttons" onclick="addElem('2')">
-        <input type="button" id='3' class="buttons" onclick="addElem('3')">
-        <input type="button" id='4' class="buttons" onclick="addElem('4')">
+        <input type="button" class="buttons" id='0' onmousedown="sound()" onclick="addElem('0')">
+        <input type="button" id='1' class="buttons" onmousedown="sound()" onclick="addElem('1')">
+        <input type="button" id='2' class="buttons" onmousedown="sound()" onclick="addElem('2')">
+        <input type="button" id='3' class="buttons" onmousedown="sound()" onclick="addElem('3')">
+        <input type="button" id='4' class="buttons" onmousedown="sound()" onclick="addElem('4')">
         <br>
-        <input type="button" id='5' class="buttons" onclick="addElem('5')">
-        <input type="button" id='6' class="buttons" onclick="addElem('6')">
-        <input type="button" id='7' class="buttons" onclick="addElem('7')">
+        <input type="button" id='5' class="buttons" onmousedown="sound()" onclick="addElem('5')">
+        <input type="button" id='6' class="buttons" onmousedown="sound()" onclick="addElem('6')">
+        <input type="button" id='7' class="buttons" onmousedown="sound()" onclick="addElem('7')">
         <br>
-        <input type="button" id='8' class="buttons" onclick="addElem('8')">
-        <input type="button" id='9' class="buttons" onclick="addElem('9')">
+        <input type="button" id='8' class="buttons" onmousedown="sound()" onclick="addElem('8')">
+        <input type="button" id='9' class="buttons" onmousedown="sound()" onclick="addElem('9')">
 
         <br>
-        <input type="button" class="buttons" onclick="foo()" value='>>>'>
+        <input disabled type="button" id='t' class="b" onclick="foo()" value='>>>'>
     </form>
 
     <script>
