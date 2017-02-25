@@ -10,12 +10,6 @@
     <link rel="stylesheet" href="{% static 'app/css/onoff.css' %}">
     <link href="https://cdn.jsdelivr.net/sweetalert2/6.1.1/sweetalert2.min.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/sweetalert2/6.1.1/sweetalert2.min.js"></script>
-    <!--/*<script src="/static/app/js/buttons.js"></script>*/-->
-    <style>
-        .bar {
-            font-size: 25px;
-        }
-    </style>
 </head>
     <audio muted id="audio" src="/static/app/0091.mp3" type="audio/mp3"></audio>
 <body>
@@ -27,8 +21,7 @@
         </label>
     </div>
 
-
-    <div class='bar' id='text'></div>
+    <div class='ruword' id='text'></div>
     <br>
 
     <form name='field'>
@@ -52,15 +45,17 @@
         <input type="button" id='9' class="buttons" onmousedown="sound()" onclick="addElem('9')">
 
         <br>
-        <input disabled type="button" id='t' class="b" onclick="foo()" value='>>>'>
+        <input disabled type="button" id='t' class="b" onclick="general()" value='>>>'>
     </form>
 
     <script>
         var ru = "{{ruwords}}"
         var en = "{{enwords}}"
         var stackbut = "{{stackbut}}"
+        var amount_points = "{{amount_points}}"
+        var ri_ = '{{ri}}'
+        var er_ = '{{er}}'
     </script>
     <script src='/static/app/js/jsindex.js'></script>
-
-</body>
-</html>
+    </body>
+    </html>

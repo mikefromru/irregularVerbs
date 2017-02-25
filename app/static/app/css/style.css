@@ -13,7 +13,8 @@
     text-decoration: none;
 }
 .menu {
-    color: darkolivegreen;
+    /*color: #2BABE5;*/
+    color: white;
     font-family: "Helvetice Neue", Arial, Helvetica, sans-serif;
     font-size: 25px;
     margin: 2px;
@@ -26,9 +27,8 @@ body {
     padding: 1;
     font-family: "Helvetice Neue", Arial, Helvetica, sans-serif;
     /*background-color: #E1E6E6;*/
-    /*background-color: #483D8B; */
-
-    background-color: #282C34;
+    background-color: #EDEEF0;; 
+    /*background-color: #282C34;*/
     color: darkolivegreen;
 }
 a {color: cornflowerblue;}
@@ -40,7 +40,8 @@ a:hover {
     color: red;
 }
 
-header {
+header {color: #fff;
+    text-decoration: none;
     background-color: black;
     height: 35px;
     width: 100%;
@@ -93,7 +94,7 @@ header h1.label:hover {
 input.text {
     text-align: center;
     background-color: white;
-    border: solid 1px black;
+    border: solid 0px black;
     width: 550px;
     height: 30px;
     padding: 5px 10px 5px 10px;
@@ -102,8 +103,9 @@ input.text {
 }
 
 .b {
-    color: green;
+    color: #2BABE5;
     background-color: white;
+    border: 0px;
     width: 160px;
     height: 35px;
     font-size: 20px;
@@ -113,25 +115,73 @@ input.text {
 
 .b[disabled] {
     color: gray;
+    border: 0px;
     background-color: Gainsboro;
 }
 
 .buttons {
     color: grey;
-
-    background-color: white;
+    border: 0px;
+    background-color: snow;
     width: 160px;
     height: 35px;
     font-size: 20px;
     margin-top: 10px;
     margin-left: 10px;
+    text-decoration: none;
 }
 
 .butDell {
     background-color: white;
+    border: 0px;
     height: 28px;
     margin-top: 10px;
     margin-left: 10px;
 }
 
+/*to change color for active and not active buttons*/
+.buttons:hover{
+    color: #2BABE5;
+    background-color: white;
+}
+
+.butDell:hover {
+    color: #2BABE5;
+    background-color: white;
+}
+
+/*to remove border in buttons --- to remove border in buttons*/
+
+.buttons:active, .buttons:focus {
+    outline: none;
+}
+.buttons::-moz-focus-inner{
+    border: 0px;
+}
+
+.butDell:active, .butDell:focus {
+    outline: none;
+}
+.butDell::-moz-focus-inner{
+    border: 0px;
+}
+
+.b:active, .b:focus {
+    outline: none;
+}
+.b::-moz-focus-inner{
+    border: 0px;
+}
 /*===========This is for charbocks==========*/
+.errorstyle {
+    font-weight: bold;
+    color:darkred;
+}
+.rightstyle {
+    font-weight: bold;
+    color: darkgreen;
+}
+.ruword {
+    font-size: 35px;
+    color: #2BA8E5;
+}

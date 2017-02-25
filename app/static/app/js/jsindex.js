@@ -36,18 +36,26 @@ function addElem(a) {
     }
 }
 //================================================================
-// this click on the button named "Go"
-function foo() {
-
-
+// this click on the button named ">>>"
+function general() {
     if (field.input.value.length == 0){ // checking on empty input
         pass
     }
 
     if (typeof list_ru[0] === 'undefined') {
         checking()
-        alert('the end')
-        location.reload()
+        if (error == 0){
+            swal("It's excellent", "You didn't make any mistakes", "success")
+        }else if(error == 1){
+            swal("You did make 1 mistake")
+        }else{
+            swal("You did make " + error + " mistakes")
+        }
+
+        function time_(){
+            document.location.href = '/app'
+        }
+        setTimeout(time_, 4000);
     }else{
         document.getElementById('text').innerHTML = list_ru.pop()
         checking()
@@ -61,16 +69,24 @@ function foo() {
 //=================================================================
 // function to check input(data) user for correctness
 function checking() {
-    // dellValueFromField()
     toad = field.input.value
     var stringEnThree = list_en.splice(-3).join(' ')
     if (toad.replace(/\s/g, '') == stringEnThree.replace(/\s/g, '')) {
+        document.getElementById('right').style.color = 'lightgreen'
         right += 1
         document.getElementById('right').innerHTML = "RIGHT: " + right + ' |'
-    
+        function colorGreen(){
+            document.getElementById('right').style.color = 'darkgreen'
+        }
+        setTimeout(colorGreen, 500)
     }else{
+        document.getElementById('error').style.color = 'red'
         error += 1
-        document.getElementById('error').innerHTML = " ERROR: " + error 
+        document.getElementById('error').innerHTML = " ERROR: " + error
+        function colorRed() {
+            document.getElementById('error').style.color = 'darkred';
+        }
+        setTimeout(colorRed, 500)
     }
     field.input.value = ''
 
@@ -85,6 +101,8 @@ function checking() {
     document.getElementById('7').value = last_ten[7]
     document.getElementById('8').value = last_ten[8]
     document.getElementById('9').value = last_ten[9]
+
+
 }
 // function to check input(data) user for correctness
 //==================================================================
@@ -109,7 +127,6 @@ var OnclickList = []
 function dellValueFromField() {
     var OnClick = field.input.value.split(" ")
     OnClick.pop()
-    console.log(OnclickList)
     field.input.value = OnClick.join(" ")
     OnclickList.pop()
     if (OnClick.length < 4) {
@@ -118,3 +135,13 @@ function dellValueFromField() {
         document.getElementById("t").disabled = false;
     }
 }
+
+
+var par = document.getElementById('t')
+par.style.color = 'black'
+
+function foo(){
+    if(par.style.color == 'red') par.style.color = 'white'
+        else par.style.color = 'red'
+}
+setInterval(sec, 2000)
