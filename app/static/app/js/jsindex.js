@@ -11,7 +11,7 @@ document.getElementById('right').innerHTML = "RIGHT: " + right + ' |'
 document.getElementById('error').innerHTML = " ERROR: " + error 
 
 var list_but = stackbut.split(' ')
-var last_ten = list_but.splice(-10)
+var last_ten = list_but.splice(-9)
 
 document.getElementById('0').value = last_ten[0]
 document.getElementById('1').value = last_ten[1]
@@ -22,7 +22,7 @@ document.getElementById('5').value = last_ten[5]
 document.getElementById('6').value = last_ten[6]
 document.getElementById('7').value = last_ten[7]
 document.getElementById('8').value = last_ten[8]
-document.getElementById('9').value = last_ten[9]
+// document.getElementById('9').value = last_ten[9]
 
 function addElem(a) {
     var obj = document.getElementById(a).value
@@ -44,6 +44,7 @@ function general() {
 
     if (typeof list_ru[0] === 'undefined') {
         checking()
+        document.getElementById('hide').style.display = "none";
         if (error == 0){
             swal("It's excellent", "You didn't make any mistakes", "success")
         }else if(error == 1){
@@ -55,7 +56,8 @@ function general() {
         function time_(){
             document.location.href = '/app'
         }
-        setTimeout(time_, 4000);
+        // setTimeout(time_, 4000);
+        document.getElementById('afterShow').style.display = '';
     }else{
         document.getElementById('text').innerHTML = list_ru.pop()
         checking()
@@ -90,7 +92,7 @@ function checking() {
     }
     field.input.value = ''
 
-    var last_ten = list_but.splice(-10)
+    var last_ten = list_but.splice(-9)
     document.getElementById('0').value = last_ten[0]
     document.getElementById('1').value = last_ten[1]
     document.getElementById('2').value = last_ten[2]
@@ -100,7 +102,7 @@ function checking() {
     document.getElementById('6').value = last_ten[6]
     document.getElementById('7').value = last_ten[7]
     document.getElementById('8').value = last_ten[8]
-    document.getElementById('9').value = last_ten[9]
+    // document.getElementById('9').value = last_ten[9]
 
 
 }
@@ -145,3 +147,7 @@ function foo(){
         else par.style.color = 'red'
 }
 setInterval(sec, 2000)
+
+function reloadPage(){
+    document.location.href = '/app'
+}
