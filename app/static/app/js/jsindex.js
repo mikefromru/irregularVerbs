@@ -11,7 +11,12 @@ document.getElementById('right').innerHTML = "RIGHT: " + right + ' |'
 document.getElementById('error').innerHTML = " ERROR: " + error 
 
 var list_but = stackbut.split(' ')
-var last_ten = list_but.splice(-9)
+var last_ten = list_but.splice(-6)
+
+function random_(a, b){
+    return Math.random() - 0.5;
+}
+last_ten.sort(random_)
 
 document.getElementById('0').value = last_ten[0]
 document.getElementById('1').value = last_ten[1]
@@ -19,9 +24,9 @@ document.getElementById('2').value = last_ten[2]
 document.getElementById('3').value = last_ten[3]
 document.getElementById('4').value = last_ten[4]
 document.getElementById('5').value = last_ten[5]
-document.getElementById('6').value = last_ten[6]
-document.getElementById('7').value = last_ten[7]
-document.getElementById('8').value = last_ten[8]
+// document.getElementById('6').value = last_ten[6]
+// document.getElementById('7').value = last_ten[7]
+// document.getElementById('8').value = last_ten[8]
 // document.getElementById('9').value = last_ten[9]
 
 function addElem(a) {
@@ -53,9 +58,9 @@ function general() {
             swal("You did make " + error + " mistakes")
         }
 
-        function time_(){
-            document.location.href = '/app'
-        }
+        // function time_(){
+            // document.location.href = '/app'
+        // }
         // setTimeout(time_, 4000);
         document.getElementById('afterShow').style.display = '';
     }else{
@@ -92,16 +97,17 @@ function checking() {
     }
     field.input.value = ''
 
-    var last_ten = list_but.splice(-9)
+    var last_ten = list_but.splice(-6)
+    last_ten.sort(random_)
     document.getElementById('0').value = last_ten[0]
     document.getElementById('1').value = last_ten[1]
     document.getElementById('2').value = last_ten[2]
     document.getElementById('3').value = last_ten[3]
     document.getElementById('4').value = last_ten[4]
     document.getElementById('5').value = last_ten[5]
-    document.getElementById('6').value = last_ten[6]
-    document.getElementById('7').value = last_ten[7]
-    document.getElementById('8').value = last_ten[8]
+    // document.getElementById('6').value = last_ten[6]
+    // document.getElementById('7').value = last_ten[7]
+    // document.getElementById('8').value = last_ten[8]
     // document.getElementById('9').value = last_ten[9]
 
 

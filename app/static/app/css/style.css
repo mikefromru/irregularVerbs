@@ -21,7 +21,7 @@
     padding: 2px;
 }
 
-body {
+.generalbody {
     text-align: center;
     margin: 0;
     padding: 1;
@@ -36,8 +36,7 @@ a:link {text-decoration: none;}
 a:visited {text-decoration: none;}
 a:active {text-decoration: none;}
 a:hover {
-    text-decoration: underline;
-    color: red;
+    color: dodgerblue;
 }
 
 header {color: #fff;
@@ -184,4 +183,36 @@ input.text {
 .ruword {
     font-size: 35px;
     color: #2BA8E5;
+}
+
+.search {
+    text-align: center;
+    height: 33px;
+    width: 270px;
+    color: grey;
+    font-size: 25px;
+    outline: none;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.search:focus{
+    color: black;
+    border: 1px solid deepskyblue;
+}
+
+.boss{
+    text-align: center;
+}
+
+.placeSearch {
+    margin-left: 52%;
+}
+
+.placeLinks {
+    /*margin-left: 24%;*/
+    margin-left: 0%;
+    /*position: fixed; top: 10%; left: 0%;*/
+    position: fixed; top: 5%;
 }

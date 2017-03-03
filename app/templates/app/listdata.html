@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<!--{% include 'app/head.html' %}-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'app/css/rootroom.css' %}">
+</head>
+<body>
+    {% for obj in data %}
+    <h3><a href="{% url 'data_edit' pk=obj.pk %}">{{ obj.russia }}</a></h3>
+    <!--<p>{{ obj.english }}</p>-->
+    {% endfor %}
+</body>
+</html>

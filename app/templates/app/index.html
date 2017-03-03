@@ -1,7 +1,7 @@
 {% load staticfiles %}
 {% include 'app/head.html' %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru-RU">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/sweetalert2/6.1.1/sweetalert2.min.js"></script>
 </head>
     <audio muted id="audio" src="/static/app/0091.mp3" type="audio/mp3"></audio>
-<body>
+<body class="generalbody">
 
     <div id='hide'>
         <div class="can-toggle">
@@ -40,9 +40,9 @@
             <input type="button" id='4' class="buttons" onmousedown="sound()" onclick="addElem('4')">
             <input type="button" id='5' class="buttons" onmousedown="sound()" onclick="addElem('5')">
             <br>
-            <input type="button" id='6' class="buttons" onmousedown="sound()" onclick="addElem('6')">
-            <input type="button" id='7' class="buttons" onmousedown="sound()" onclick="addElem('7')">
-            <input type="button" id='8' class="buttons" onmousedown="sound()" onclick="addElem('8')">
+            <!--<input type="button" id='6' class="buttons" onmousedown="sound()" onclick="addElem('6')">-->
+            <!--<input type="button" id='7' class="buttons" onmousedown="sound()" onclick="addElem('7')">-->
+            <!--<input type="button" id='8' class="buttons" onmousedown="sound()" onclick="addElem('8')">-->
             <!--<br>-->
             <!--<input type="button" id='9' class="buttons" onmousedown="sound()" onclick="addElem('9')">-->
 
@@ -55,6 +55,7 @@
         <h3 class="ruword" >You can start from the beginnig</h3>
         <button class="buttons" onclick="reloadPage()">press</button>
     </div>
+
 
     <script>
         var ru = "{{ruwords}}"

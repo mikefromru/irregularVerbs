@@ -1,0 +1,24 @@
+input {
+    color: grey;
+    height: 40px;
+    width: 70%;
+    font-size: 25px;
+    outline: none;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: darkgray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input:focus{
+    color: black;
+    border: 1px solid deepskyblue;
+}
+body {
+    color: green;
+    background: #282C34;
+}
+
+a {
+    font-size: 20px;
+}
