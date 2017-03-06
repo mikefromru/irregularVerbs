@@ -25,12 +25,16 @@
         <div class='ruword' id='text'></div>
         <br>
 
-        <form name='field'>
-            <input type="text" class="text" name='input' onfocus="this.blur()"
+
+        <form onsubmit="general();return false;" id='hi' name='field'>
+            <input type="text" id='tmp' autocomplete="off" class="text" name='input' onfocus="return getStarteEnable(this)"
             placeholder="infinitive    past simple    past participle">
-            <input type="button" id='dell' class="butDell" value="X" onclick="dellValueFromField()"
+            <input type="button" id='dell' class="butDell" value="X" onclick="dellValueFromField()">
             <br>
             <br>
+            <a class="hide_show" href='javascript:;' onclick="toggle(this);hi.reset();">hide</a>
+
+            <div id='hide_show'>
 
             <input type="button" class="buttons" id='0' onmousedown="sound()" onclick="addElem('0')">
             <input type="button" id='1' class="buttons" onmousedown="sound()" onclick="addElem('1')">
@@ -40,22 +44,38 @@
             <input type="button" id='4' class="buttons" onmousedown="sound()" onclick="addElem('4')">
             <input type="button" id='5' class="buttons" onmousedown="sound()" onclick="addElem('5')">
             <br>
-            <!--<input type="button" id='6' class="buttons" onmousedown="sound()" onclick="addElem('6')">-->
-            <!--<input type="button" id='7' class="buttons" onmousedown="sound()" onclick="addElem('7')">-->
-            <!--<input type="button" id='8' class="buttons" onmousedown="sound()" onclick="addElem('8')">-->
-            <!--<br>-->
-            <!--<input type="button" id='9' class="buttons" onmousedown="sound()" onclick="addElem('9')">-->
-
             <br>
             <input disabled type="button" id='t' class="b" onclick="general()" value='>>>'>
+            </div>
+
         </form>
     </div>
+
+
+    <script>
+        $("#t").keyup(function(event){
+            if(event.keyCode == 13){
+                event.preventDefault();
+            }
+        })
+    </script>
 
     <div id='afterShow'>
         <h3 class="ruword" >You can start from the beginnig</h3>
         <button class="buttons" onclick="reloadPage()">press</button>
     </div>
 
+    <script>
+        function toggle(a){
+            var target = document.getElementById('hide_show');
+            target.style.display = target.style.display == 'none' ? "block" : 'none';
+            a.innerText = a.innerText == 'hide' ? 'show' : 'hide';
+        }
+        function getStarteEnable(ctx) {
+            var style = document.getElementById('hide_show').style.display;
+            return style === 'none' ? true : ctx.blur();
+        }
+    </script>
 
     <script>
         var ru = "{{ruwords}}"
@@ -63,6 +83,7 @@
         var stackbut = "{{stackbut}}"
         document.getElementById('afterShow').style.display = 'none';
     </script>
+
     <script src='/static/app/js/jsindex.js'></script>
     </body>
     </html>

@@ -1,13 +1,17 @@
 input {
-    color: grey;
+    /*color: grey;*/
     height: 40px;
     width: 70%;
     font-size: 25px;
     outline: none;
     border: 1px solid #cccccc;
     border-radius: 3px;
-    background: darkgray;
+    background: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#id_russia{
+    margin-left: 8px; 
 }
 
 input:focus{
@@ -15,10 +19,60 @@ input:focus{
     border: 1px solid deepskyblue;
 }
 body {
-    color: green;
-    background: #282C34;
+    background-color: #EDEEF0; 
 }
 
 a {
+    color: #79AEC8; 
+    font-size: 20px;
+    outline: none; /* to remove a border about links*/
+}
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:active {text-decoration: none;}
+a:hover {
+    /*color: dodgerblue;*/
+    color: #417690;
+}
+
+.btn_cancel {
+    border: 0px;
+    color: white;
+    font-size: 20px;
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 30px;
+    margin-left: 1%;
+}
+
+.btn_save {
+    border: 0px;
+    color: white;
+    font-size: 20px;
+    background-color: seagreen;
+    width: 100px;
+    height: 30px;
+    margin-left: 8%;
+}
+.btn_delete {
+    border: 0px;
+    color: white;
+    font-size: 20px;
+    background-color: firebrick;
+    width: 100px;
+    height: 30px;
+    margin-left: 37%;
+}
+.btn_search {
+    border: 0px;
+    color: white;
+    background-color: dodgerblue;
+    width: 100px;
+    height: 30px;
     font-size: 20px;
 }
+
+.btn_cancel:hover {background-color: cadetblue; color: white}
+.btn_save:hover{background-color: green; color: white;}
+.btn_delete:hover{background-color: darkred; color: white;}
+.btn_search:hover{background-color: steelblue; color: white;}

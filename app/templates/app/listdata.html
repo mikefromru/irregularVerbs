@@ -1,3 +1,4 @@
+{% include 'app/head_for_admin.html' %}
 {% load staticfiles %}
 <!--{% include 'app/head.html' %}-->
 <!DOCTYPE html>
@@ -8,9 +9,11 @@
     <link rel="stylesheet" href="{% static 'app/css/rootroom.css' %}">
 </head>
 <body>
+    <div style="text-align: center">
     {% for obj in data %}
     <h3><a href="{% url 'data_edit' pk=obj.pk %}">{{ obj.russia }}</a></h3>
     <!--<p>{{ obj.english }}</p>-->
     {% endfor %}
+    </div>
 </body>
 </html>

@@ -1,16 +1,17 @@
+{% extends 'app/head_for_admin.html' %}
 {% load staticfiles %}
-{% include 'app/head_for_admin.html' %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'app/css/rootroom.css' %}">
-    <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <!--<link rel="stylesheet" href="{% static 'app/css/style.css' %}">-->
+    <!--<link rel="stylesheet" href="{% static 'app/css/rootroom.css' %}">-->
+    <!--/*<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>*/-->
 </head>
 <body>
-    <div class="placeSearch">
+    <!--<div class="placeSearch">
         <form  id='formSearch' action="/search/" method="get">
             <input class="search" type="text" name="q"\>
             <button  class='buttons' type="submit">Search</button>
@@ -23,18 +24,15 @@
             </ul>
         {% endif %}
     </div>
-    <div class="placeLinks">
-
-        <ul>
-            <li><a href="javascript://" onclick="$('#content').load('/demo');return false;">Demo</a></li>
-            <li><a href='/addition'>Addition</a></li>
-            <li><a href="javascript://" onclick="$('#content').load('/listdata');return false;">Listdata</a></li>
-        </ul>
-    </div>
- 
     <div id="content" style="text-align: center">
-    </div>
+    </div>-->
 
-    <script src="/static/app/js/ajaxs.js"></script>
+    <!--<script src="/static/app/js/ajaxs.js"></script>-->
+<!--<ul>
+    <li><a href="javascript://" onclick="$('#content').load('/demo');return false;">Demo</a></li>
+    <li><a href='/addition'>Addition</a></li>
+    <li><a href="javascript://" onclick="$('#content').load('/listdata');return false;">Listdata</a></li>-->
+<!--</ul>-->
 </body>
 </html>
+{% endblock %}

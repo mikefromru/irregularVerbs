@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="{% static 'app/css/rootroom.css' %}">
 </head>
 <body>
-   <p>You search for: <strong>{{ query }}</strong></p>
-   {% if data_ %}
-   <p>Found {{ data_|length }} data_ {{ data_|pluralize }}.</p>
-   <ul>
-       {% for obj in data_  %}
-       <h4><a href="{% url 'data_edit' pk=obj.pk %}">
-       <li>{{ obj.russia }}</li></a></h4>
-       {% endfor %}
-   </ul>
-   {% else %}
-   <p>Not Found</p>
-   {% endif %}
-   <a href="/rootroom">go back</a>
+    <div style="text-align: center">
+    <p>You search for: <strong>{{ query }}</strong></p>
+    {% if data_ %}
+    <p>Found {{ data_|length }} elem.</p>
+    <ul>
+        {% for obj in data_  %}
+        <h4><a href="{% url 'data_edit' pk=obj.pk %}">
+        <li>{{ obj.russia }}</li></a></h4>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Not Found</p>
+    {% endif %}
+    </div>
 </body>
 </html>

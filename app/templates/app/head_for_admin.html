@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/rootroom.css' %}">
     <link rel="shortcut icon" href="{% static 'app/favicon.ico' %}">
 </head>
 <body>
@@ -13,10 +14,7 @@
             <h1 class='label'>Room of Root</h1>
             <nav>
                 <ul class="menu">
-                    <a href='/admin'>Admin</a>
-                </ul>
-                <ul class="menu">
-                    <a href="/rootroom">Rootroom</a>
+                    <a href="/rootroom">Root</a>
                 </ul>
                 <ul class="menu">
                     <a href="/">App</a>
@@ -25,7 +23,27 @@
         </div>
     </header>
     <div class="container">
-        {% block content %} {% endblock %}
+        <div class="placeSearch">
+            <form  id='formSearch' action="/search/" method="get">
+                <input class="search" type="text" name="q" onkeyup="btn.disabled = this.value ? false : 'disabled';" />
+                <button id='btn' class="btn_search" type="submit" disabled="disabled">Search</button>
+            </form>
+        </div>
+            <!--{% if errors %}
+                <ul>
+                    {% for error in errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}-->
+
+        <a href='/addition'>Addition</a></li><br>
+        <a href="/listdata">Listdata</a>
+
+        <!--/*<script src="/static/app/js/ajaxs.js"></script>*/-->
+
+        {% block hello %}{% endblock %}
+        {% block content %}{% endblock %}
     </div>
 </body>
 </html>

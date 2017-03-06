@@ -1,24 +1,26 @@
 {% load staticfiles %}
+{% include 'app/head_for_admin.html' %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
-    <link rel="stylesheet" href="{% static 'app/css/.css' %}">
     <link rel="stylesheet" href="{% static 'app/css/rootroom.css' %}">
 </head>
 
-<body style='text-align: center'>
-    <div id="content">
-    {% include 'app/head_for_admin.html' %}
-    <h1>Adding in DB. [ {{ amount }} ]</h1>
-    <form id="formAdd">{% csrf_token %}
+<body>
+    <div class="container">
+    <h3>Amount in DB. [ {{ amount }} ]</h3>
+    <form id="formAdd" method="POST">{% csrf_token %}
         {{form.as_p}}
-        <button class='buttons' type="submit">Save</button>
+        <div class="buttons_in_addition">
+            <input class='btn_save' type="submit" value="Save">
+            <input type="button"  class="btn_cancel" onclick="location.href = '/rootroom'" value='Cancel'>
+        </div>
     </form>
     </div>
 
-    <script src="/static/app/js/ajaxs.js"></script>
+    <!--/*<script src="/static/app/js/ajaxs.js"></script>*/-->
 </body>
 </html>
