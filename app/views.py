@@ -1,6 +1,6 @@
-from django.views.generic import DeleteView
-
 from django.http import HttpResponseNotFound, Http404
+
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 from django.shortcuts import render, redirect, HttpResponseRedirect, get_object_or_404
 from django.http import HttpResponse
@@ -128,5 +128,12 @@ def listdata(request):
     if not request.user.is_authenticated():
         return HttpResponseNotFound('<h1>Page not found</h1>')
     data = Word.objects.all()
+    paginator = Paginator(data, 14)
+    page = request.GET.get('page')
+    try:
+        data = paginator.page(page) 
+    except PageNotAnInteger:
+        data = paginator.page(1)
+    except EmptyPage:
+        data = paginator.page(paginator.num_pages)
     return render(request, 'app/listdata.html', {'data': data})
-

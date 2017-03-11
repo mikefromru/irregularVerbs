@@ -4,7 +4,7 @@
 <html lang="ru-RU">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Verbs 100</title>
     <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
     <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'app/css/onoff.css' %}">
@@ -13,7 +13,6 @@
 </head>
     <audio muted id="audio" src="/static/app/0091.mp3" type="audio/mp3"></audio>
 <body class="generalbody">
-
     <div id='hide'>
         <div class="can-toggle">
             <input id="a" type="checkbox">
@@ -62,7 +61,7 @@
 
     <div id='afterShow'>
         <h3 class="ruword" >You can start from the beginnig</h3>
-        <button class="buttons" onclick="reloadPage()">press</button>
+        <button id="ajax_bt" class="buttons" onclick="reloadPage()">press</button>
     </div>
 
     <script>
@@ -85,5 +84,5 @@
     </script>
 
     <script src='/static/app/js/jsindex.js'></script>
-    </body>
-    </html>
+</body>
+</html>

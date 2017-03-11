@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    padding: 1p;
+}
+
 input {
     /*color: grey;*/
     height: 40px;
@@ -64,6 +69,7 @@ a:hover {
     margin-left: 37%;
 }
 .btn_search {
+    outline: none;
     border: 0px;
     color: white;
     background-color: dodgerblue;
@@ -76,3 +82,20 @@ a:hover {
 .btn_save:hover{background-color: green; color: white;}
 .btn_delete:hover{background-color: darkred; color: white;}
 .btn_search:hover{background-color: steelblue; color: white;}
+
+#id_name,#id_email {
+    margin-left: 27px;
+}
+#id_message{
+    height: 300px;
+    width: 70%;
+    font-size: 25px;
+    outline: none;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#id_message:focus {
+    border: 1px solid deepskyblue;
+}

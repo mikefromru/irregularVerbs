@@ -9,11 +9,25 @@
     <link rel="stylesheet" href="{% static 'app/css/rootroom.css' %}">
 </head>
 <body>
-    <div style="text-align: center">
+    <br>
+    <div class="container">
+    <hr width="900" size="0" color="#79AEC8" />
     {% for obj in data %}
+    <li>
     <h3><a href="{% url 'data_edit' pk=obj.pk %}">{{ obj.russia }}</a></h3>
-    <!--<p>{{ obj.english }}</p>-->
+    </li>
     {% endfor %}
+
+    {% if data.has_previous %}
+    <a href="?page={{ data.previous_page_number }}">go back</a>
+    {% endif %}
+
+    Page {{ data.number }} from {{ data.paginator.num_pages }}
+
+    {% if data.has_next %}
+    <a href="?page={{ data.next_page_number }}">next</a>
+    {% endif %}
+
     </div>
 </body>
 </html>

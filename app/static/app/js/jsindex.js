@@ -80,18 +80,22 @@ function checking() {
     var stringEnThree = list_en.splice(-3).join(' ')
     if (toad.replace(/\s/g, '') == stringEnThree.replace(/\s/g, '')) {
         document.getElementById('right').style.color = 'lightgreen'
+        document.getElementById('right').style.fontSize = '30px'
         right += 1
         document.getElementById('right').innerHTML = "RIGHT: " + right + ' |'
         function colorGreen(){
             document.getElementById('right').style.color = 'darkgreen'
+        document.getElementById('right').style.fontSize = '25px'
         }
         setTimeout(colorGreen, 500)
     }else{
         document.getElementById('error').style.color = 'red'
+        document.getElementById('error').style.fontSize = '30px'
         error += 1
         document.getElementById('error').innerHTML = " ERROR: " + error
         function colorRed() {
             document.getElementById('error').style.color = 'darkred';
+            document.getElementById('error').style.fontSize = '25px'
         }
         setTimeout(colorRed, 500)
     }

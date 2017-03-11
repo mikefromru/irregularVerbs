@@ -18,6 +18,7 @@
     font-family: "Helvetice Neue", Arial, Helvetica, sans-serif;
     font-size: 25px;
     margin: 2px;
+    margin-top: 15px;
     padding: 2px;
 }
 
@@ -27,8 +28,8 @@
     padding: 1;
     font-family: "Helvetice Neue", Arial, Helvetica, sans-serif;
     /*background-color: #E1E6E6;*/
-    background-color: #EDEEF0; 
-    /*background-color: #282C34;*/
+    /*background-color: #EDEEF0; */
+    background-color: #E9E9E9;
     color: darkolivegreen;
 }
 
@@ -50,18 +51,24 @@ a:hover {
 header {
     color: #fff;
     text-decoration: none;
-    background-color: black;
-    height: 35px;
+    background-color: #26A9E7;
+    /*background-color: black;*/
+    height: 65px;
     width: 100%;
     opacity: .9;
+    margin-top: 0px;
     margin-bottom: 10px;
 }
 header h1.label {
     margin: 0;
+    font-family: "SportinGrotesqueGras";
+    font-weight: normal;
+    font-style: normal;
     font-size: 1.7em;
     color: #fff;
     text-transform: uppercase;
     float: left;
+    margin-top: 15px;
 }
 
 header h1.label:hover {
@@ -111,50 +118,70 @@ input.text {
 }
 
 .b {
-    color: #2BABE5;
-    background-color: white;
-    border: 0px;
-    width: 160px;
+    color: white;
+    background-color: #7EB530;
+    border: 1px;
+    width: 140px;
     height: 35px;
+    font-family: "PumpkinRegular";
+    font-weight: normal;
+    font-style: normal;
     font-size: 20px;
     margin-top: 10px;
+    border-radius: 0px;
 }
 
 .b[disabled] {
     color: gray;
-    border: 0px;
-    background-color: Gainsboro;
+    border: 2px;
+    background-color: #C0C0C0;
 }
 
 .buttons {
-    color: grey;
-    border: 0px;
-    background-color: snow;
-    width: 160px;
+    color: white;
+    border: 1px solid #333;
+    background-color: #7EB530;
+    border: 1px;
+    width: 140px;
     height: 35px;
-    font-size: 20px;
+    font-family: "PumpkinRegular";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 17px;
     margin-top: 10px;
     margin-left: 10px;
+    border-radius: 0px;
     text-decoration: none;
+    /*background: linear-gradient(to top, green, greenyellow);*/
 }
 
 .butDell {
-    background-color: white;
+    color: white;
+    /*background-color: white;*/
+    background-color: #009EEB;
     border: 0px;
     height: 28px;
+    font-family: "PumpkinRegular";
+    font-weight: normal;
+    font-style: normal;
     margin-top: 10px;
     margin-left: 10px;
+    border-radius: 15px;
 }
 
 /*to change color for active and not active buttons*/
 .buttons:hover{
-    color: #2BABE5;
-    background-color: white;
+    /*color: #2BABE5;*/
+    color: white;
+    /*background-color: white;*/
+    background-color: #7BA540;
 }
 
 .butDell:hover {
-    color: #2BABE5;
-    background-color: white;
+    /*color: #2BABE5;*/
+    color: white;
+    background-color: deepskyblue;
+    /*background-color: white;*/
 }
 
 /*to remove border in buttons --- to remove border in buttons*/
@@ -181,14 +208,22 @@ input.text {
 }
 /*===========This is for charbocks==========*/
 .errorstyle {
-    font-weight: bold;
+    font-family: "PumpkinRegular";
+    font-weight: normal;
+    font-style: normal;
+    /*font-weight: bold;*/
     color:darkred;
 }
 .rightstyle {
-    font-weight: bold;
-    color: darkgreen;
+    font-family: "PumpkinRegular";
+    font-weight: normal;
+    font-style: normal;
+    /*font-weight: bold;*/
+    color:darkgreen;
+    /*color:#7EB530;*/
 }
 .ruword {
+    font-family: "Helvetice Neue", Arial, Helvetica, sans-serif;
     font-size: 35px;
     color: #2BA8E5;
 }

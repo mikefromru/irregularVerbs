@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="container">
-    <p>My name is data_edit.html</p>
     <form method="POST">{% csrf_token %}
         {{form.as_p}}
     <input type="submit" class="btn_save" name='save' value="Save">

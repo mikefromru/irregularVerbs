@@ -12,6 +12,11 @@ AppConfig	app/apps.py	/^class AppConfig(AppConfig):$/;"	kind:class	line:4
 BASE_DIR	verbs100/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:16
 DATABASES	verbs100/settings.py	/^DATABASES = {$/;"	kind:variable	line:77
 DEBUG	verbs100/settings.py	/^DEBUG = True$/;"	kind:variable	line:26
+EMAIL_HOST	verbs100/settings.py	/^EMAIL_HOST = 'smtp.gmail.com'$/;"	kind:variable	line:123
+EMAIL_HOST_PASSWORD	verbs100/settings.py	/^EMAIL_HOST_PASSWORD = 'vijQJRhHxIKw'$/;"	kind:variable	line:126
+EMAIL_HOST_USER	verbs100/settings.py	/^EMAIL_HOST_USER = 'mymikefromru@gmail.com'$/;"	kind:variable	line:125
+EMAIL_USE_TLS	verbs100/settings.py	/^EMAIL_USE_TLS = True/;"	kind:variable	line:127
+EMAI_PORT	verbs100/settings.py	/^EMAI_PORT = 587$/;"	kind:variable	line:124
 INSTALLED_APPS	verbs100/settings.py	/^INSTALLED_APPS = [$/;"	kind:variable	line:33
 LANGUAGE_CODE	verbs100/settings.py	/^LANGUAGE_CODE = 'ru-ru'$/;"	kind:variable	line:107
 MIDDLEWARE	verbs100/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:43
@@ -19,7 +24,8 @@ Meta	app/forms.py	/^    class Meta:$/;"	kind:class	line:5
 Migration	app/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
 Migration	app/migrations/0002_word_buttons.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
 ROOT_URLCONF	verbs100/settings.py	/^ROOT_URLCONF = 'verbs100.urls'$/;"	kind:variable	line:53
-STATIC_URL	verbs100/settings.py	/^STATIC_URL = '\/static\/'/;"	kind:variable	line:121
+STATIC_URL	verbs100/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:121
+SearchRussianWord	app/admin.py	/^class SearchRussianWord(admin.ModelAdmin):$/;"	kind:class	line:4
 TEMPLATES	verbs100/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:55
 TIME_ZONE	verbs100/settings.py	/^TIME_ZONE = 'UTC'$/;"	kind:variable	line:109
 USE_I18N	verbs100/settings.py	/^USE_I18N = True$/;"	kind:variable	line:111
@@ -32,13 +38,13 @@ __init__.py	app/__init__.py	1;"	kind:file	line:1
 __init__.py	app/migrations/__init__.py	1;"	kind:file	line:1
 __init__.py	verbs100/__init__.py	1;"	kind:file	line:1
 __str__	app/models.py	/^    def __str__(self):$/;"	kind:member	line:8
-addition	app/views.py	/^def addition(request):$/;"	kind:function	line:35
+addition	app/views.py	/^def addition(request):$/;"	kind:function	line:37
 admin.py	app/admin.py	1;"	kind:file	line:1
 application	verbs100/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
 apps.py	app/apps.py	1;"	kind:file	line:1
 buttons	app/models.py	/^    buttons = models.CharField(max_length=255, null=True)$/;"	kind:variable	line:6
-data_edit	app/views.py	/^def data_edit(request, pk):$/;"	kind:function	line:52
-demo	app/views.py	/^def demo(request):$/;"	kind:function	line:91
+data_edit	app/views.py	/^def data_edit(request, pk):$/;"	kind:function	line:61
+demo	app/views.py	/^def demo(request):$/;"	kind:function	line:108
 dependencies	app/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:12
 dependencies	app/migrations/0002_word_buttons.py	/^    dependencies = [$/;"	kind:variable	line:10
 english	app/models.py	/^    english = models.CharField(max_length=255)$/;"	kind:variable	line:5
@@ -46,9 +52,9 @@ field	app/migrations/0002_word_buttons.py	/^            field=models.CharField(m
 fields	app/forms.py	/^        fields = ('russia', 'english', 'buttons')$/;"	kind:variable	line:7
 fields	app/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:18
 forms.py	app/forms.py	1;"	kind:file	line:1
-index	app/views.py	/^def index(request):$/;"	kind:function	line:11
+index	app/views.py	/^def index(request):$/;"	kind:function	line:13
 initial	app/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:10
-listdata	app/views.py	/^def listdata(request):$/;"	kind:function	line:104
+listdata	app/views.py	/^def listdata(request):$/;"	kind:function	line:127
 manage.py	manage.py	1;"	kind:file	line:1
 model	app/forms.py	/^        model = Word$/;"	kind:variable	line:6
 model_name	app/migrations/0002_word_buttons.py	/^            model_name='word',$/;"	kind:variable	line:16
@@ -58,10 +64,11 @@ name	app/migrations/0001_initial.py	/^            name='Word',$/;"	kind:variable
 name	app/migrations/0002_word_buttons.py	/^            name='buttons',$/;"	kind:variable	line:17
 operations	app/migrations/0001_initial.py	/^    operations = [$/;"	kind:variable	line:15
 operations	app/migrations/0002_word_buttons.py	/^    operations = [$/;"	kind:variable	line:14
-rootroom	app/views.py	/^def rootroom(request):$/;"	kind:function	line:101
+rootroom	app/views.py	/^def rootroom(request):$/;"	kind:function	line:121
 russia	app/models.py	/^    russia = models.CharField(max_length=255)$/;"	kind:variable	line:4
-search	app/views.py	/^def search(request):$/;"	kind:function	line:70
-search_form	app/views.py	/^def search_form(request):$/;"	kind:function	line:49
+search	app/views.py	/^def search(request):$/;"	kind:function	line:83
+search_fields	app/admin.py	/^    search_fields = ('russia',)$/;"	kind:variable	line:5
+search_form	app/views.py	/^def search_form(request):$/;"	kind:function	line:55
 settings.py	verbs100/settings.py	1;"	kind:file	line:1
 tests.py	app/tests.py	1;"	kind:file	line:1
 urlpatterns	app/urls.py	/^urlpatterns = [$/;"	kind:variable	line:4
