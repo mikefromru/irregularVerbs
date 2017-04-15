@@ -12,19 +12,16 @@ AppConfig	app/apps.py	/^class AppConfig(AppConfig):$/;"	kind:class	line:4
 BASE_DIR	verbs100/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:16
 DATABASES	verbs100/settings.py	/^DATABASES = {$/;"	kind:variable	line:77
 DEBUG	verbs100/settings.py	/^DEBUG = True$/;"	kind:variable	line:26
-EMAIL_HOST	verbs100/settings.py	/^EMAIL_HOST = 'smtp.gmail.com'$/;"	kind:variable	line:123
-EMAIL_HOST_PASSWORD	verbs100/settings.py	/^EMAIL_HOST_PASSWORD = 'vijQJRhHxIKw'$/;"	kind:variable	line:126
-EMAIL_HOST_USER	verbs100/settings.py	/^EMAIL_HOST_USER = 'mymikefromru@gmail.com'$/;"	kind:variable	line:125
-EMAIL_USE_TLS	verbs100/settings.py	/^EMAIL_USE_TLS = True/;"	kind:variable	line:127
-EMAI_PORT	verbs100/settings.py	/^EMAI_PORT = 587$/;"	kind:variable	line:124
 INSTALLED_APPS	verbs100/settings.py	/^INSTALLED_APPS = [$/;"	kind:variable	line:33
 LANGUAGE_CODE	verbs100/settings.py	/^LANGUAGE_CODE = 'ru-ru'$/;"	kind:variable	line:107
 MIDDLEWARE	verbs100/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:43
 Meta	app/forms.py	/^    class Meta:$/;"	kind:class	line:5
 Migration	app/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
 Migration	app/migrations/0002_word_buttons.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
+PROJECT_ROOT	verbs100/settings.py	/^PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))$/;"	kind:variable	line:121
 ROOT_URLCONF	verbs100/settings.py	/^ROOT_URLCONF = 'verbs100.urls'$/;"	kind:variable	line:53
-STATIC_URL	verbs100/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:121
+STATIC_ROOT	verbs100/settings.py	/^STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')$/;"	kind:variable	line:122
+STATIC_URL	verbs100/settings.py	/^STATIC_URL = '\/static\/'/;"	kind:variable	line:124
 SearchRussianWord	app/admin.py	/^class SearchRussianWord(admin.ModelAdmin):$/;"	kind:class	line:4
 TEMPLATES	verbs100/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:55
 TIME_ZONE	verbs100/settings.py	/^TIME_ZONE = 'UTC'$/;"	kind:variable	line:109
