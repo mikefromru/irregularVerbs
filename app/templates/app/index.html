@@ -31,7 +31,7 @@
             <input type="button" id='dell' class="butDell" value="X" onclick="dellValueFromField()">
             <br>
             <br>
-            <a class="hide_show" href='javascript:;' onclick="toggle(this);hi.reset();">hide</a>
+            <a class="hide_show" href='javascript:;' onclick="toggle(this);hi.reset();">скрыть</a>
 
             <div id='hide_show'>
 
@@ -60,15 +60,15 @@
     </script>
 
     <div id='afterShow'>
-        <h3 class="ruword" >You can start from the beginnig</h3>
-        <button id="ajax_bt" class="buttons" onclick="reloadPage()">press</button>
+        <h3 class="ruword" >Ты можешь начать сначала</h3>
+        <button id="ajax_bt" class="buttons" onclick="reloadPage()">назад</button>
     </div>
 
     <script>
         function toggle(a){
             var target = document.getElementById('hide_show');
             target.style.display = target.style.display == 'none' ? "block" : 'none';
-            a.innerText = a.innerText == 'hide' ? 'show' : 'hide';
+            a.innerText = a.innerText == 'скрыть' ? 'показать' : 'скрыть';
         }
         function getStarteEnable(ctx) {
             var style = document.getElementById('hide_show').style.display;
